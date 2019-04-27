@@ -8,17 +8,34 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 <style>
+html, body {
+  font-family: Microsoft JhengHei;
+}
 .container {
   /* border: 1px solid; */
   display: grid;
   grid-gap: 5px;
   grid-template-columns: repeat(auto-fit, minmax(420px, auto));
-  grid-auto-flow:inherit;
 }
-img {
+img { width: 100%; }
+.navbar {
+  display: flex;
+  position: fixed;
   width: 100%;
+  color: #fff;
+  top: 0;
+  padding-left: 10px;
+  background-color: rgba(0, 0, 0, .5);
 }
-@media (max-width: 870px) {
+.logo {
+  /* border: 1px solid #fff; */
+}
+.title {
+  /* border: 1px solid #fff; */
+  flex: 1;
+  text-align: center;
+}
+@media (max-width: 840px) {
   .container {
     display: flex;
     flex-wrap: wrap;
@@ -29,13 +46,14 @@ img {
   .container {
     padding: 0 5px;
   }
-  img {
-    width: 100%;
-  }
 }
 </style>
 
 <body>
+  <div class="navbar">
+    <h1 class="logo">AVENGERS</h1>
+    <h1 class="title">William Lai</h1>
+  </div>
   <div class="container">
     <div><img src="img/lai-1.gif"></div>
     <div><img src="img/lai-2.gif"></div>
