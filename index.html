@@ -10,14 +10,25 @@
 <style>
 html, body {
   font-family: Microsoft JhengHei;
+  background-image: url(https://pursuenews.com/wp-content/uploads/2018/03/Avengers-Infinity-War-poster.jpg);
 }
 .container {
   /* border: 1px solid; */
+  margin: 0 auto;
+  max-width: 1920px;
   display: grid;
   grid-gap: 5px;
   grid-template-columns: repeat(auto-fit, minmax(420px, auto));
+  /* grid-auto-rows: dense; */
+  /* grid-auto-rows: minmax(177px, auto); */
 }
-img { width: 100%; }
+.container>div {
+  background-color: #ddd;
+  align-self: center;
+  /* justify-self: center; */
+}
+.logo { width: 200px; }
+img { width: 100%; object-fit: cover;}
 .navbar {
   display: flex;
   position: fixed;
@@ -33,7 +44,10 @@ img { width: 100%; }
 .title {
   /* border: 1px solid #fff; */
   flex: 1;
-  text-align: center;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 840px) {
   .container {
@@ -51,7 +65,9 @@ img { width: 100%; }
 
 <body>
   <div class="navbar">
-    <h1 class="logo">AVENGERS</h1>
+    <h1 class="logo">
+      <img src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/avengersendgame_lob_log_01_1.png" alt="">
+    </h1>
     <h1 class="title">William Lai</h1>
   </div>
   <div class="container">
