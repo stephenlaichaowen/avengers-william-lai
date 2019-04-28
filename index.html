@@ -11,24 +11,27 @@
 html, body {
   font-family: Microsoft JhengHei;
   background-image: url(https://pursuenews.com/wp-content/uploads/2018/03/Avengers-Infinity-War-poster.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 .container {
-  /* border: 1px solid; */
   margin: 0 auto;
   max-width: 1920px;
-  display: grid;
-  grid-gap: 5px;
-  grid-template-columns: repeat(auto-fit, minmax(420px, auto));
-  /* grid-auto-rows: dense; */
-  /* grid-auto-rows: minmax(177px, auto); */
+  line-height: 0;
+  -webkit-column-count: 4;
+  -webkit-column-gap:   0px;
+  -moz-column-count:    4;
+  -moz-column-gap:      0px;
+  column-count:         4;
+  column-gap:           0px;  
 }
-.container>div {
-  background-color: #ddd;
-  align-self: center;
-  /* justify-self: center; */
-}
+.container>div { background-color: #ddd; }
+
 .logo { width: 200px; }
-img { width: 100%; object-fit: cover;}
+
+img { width: 100%; }
+
 .navbar {
   display: flex;
   position: fixed;
@@ -38,18 +41,35 @@ img { width: 100%; object-fit: cover;}
   padding-left: 10px;
   background-color: rgba(0, 0, 0, .5);
 }
-.logo {
-  /* border: 1px solid #fff; */
-}
 .title {
   /* border: 1px solid #fff; */
   flex: 1;
-  /* text-align: center; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 1260px) {
+  .container {
+    -moz-column-count:    3;
+    -webkit-column-count: 3;
+    column-count:         3;
+  }
+}
 @media (max-width: 840px) {
+  .container {
+    -moz-column-count:    2;
+    -webkit-column-count: 2;
+    column-count:         2;
+  }
+}
+@media (max-width: 420px) {
+  .container {
+    -moz-column-count:    1;
+    -webkit-column-count: 1;
+    column-count:         1;
+  }
+}
+/* @media (max-width: 840px) {
   .container {
     display: flex;
     flex-wrap: wrap;
@@ -60,7 +80,7 @@ img { width: 100%; object-fit: cover;}
   .container {
     padding: 0 5px;
   }
-}
+} */
 </style>
 
 <body>
